@@ -17,11 +17,11 @@ ingress:
     cert-manager.io/cluster-issuer: letsencrypt-prod
     acme.cert-manager.io/http01-edit-in-place: “true”
   hosts:
-    - host: stage-artemis.pathofneo.net
+    - host: prod-artemis.pathofneo.net
       paths:
         - path: /
           pathType: ImplementationSpecific
   tls:
-    - secretName: stage-artemis-tls
+    - secretName: prod-artemis-tls
       hosts:
-        - stage-artemis.pathofneo.net
+        - prod-artemis.pathofneo.net
