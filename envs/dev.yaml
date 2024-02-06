@@ -7,3 +7,19 @@ image:
 service:
   type: ClusterIP
   port: 5000
+
+ingress:
+  enabled: true
+  annotations:
+    {}
+    # kubernetes.io/ingress.class: nginx
+    # kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: dev-artemis.projectxconsulting.net
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls:
+    - secretName: dev-artemis-tls
+      hosts:
+        - dev-artemis.projectxconsulting.net
