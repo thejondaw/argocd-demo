@@ -25,4 +25,4 @@ ingress:
   tls:
     - secretName: dev-artemis-tls
       hosts:
-        - dev-artemis.projectxconsulting.net
+        - dev-artemis.pathofneo.net
